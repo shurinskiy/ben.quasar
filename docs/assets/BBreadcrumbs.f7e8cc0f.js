@@ -1,0 +1,1 @@
+import{_ as r,o as s,c as a,a as t,I as c}from"./index.fcade5f2.js";const n={name:"BBreadcrumbs",setup(){return{}}},o={class:"breadcrumbs"},_={class:"breadcrumbs__inner container"};function d(e,u,i,l,m,p){return s(),a("div",o,[t("div",_,[c(e.$slots,"default")])])}var b=r(n,[["render",d]]);export{b as B};

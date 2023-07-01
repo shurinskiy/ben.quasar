@@ -1,0 +1,1 @@
+@charset "UTF-8";.breadcrumbs{margin-bottom:20px}.breadcrumbs__inner{padding-top:25px}.breadcrumbs__inner a{display:inline-block;padding:5px 8px 5px 0;color:#343c88}.breadcrumbs__inner a:not(:last-child):after{display:inline-block;content:">";font-family:RM,sans-serif;padding-left:10px}.breadcrumbs__inner span{display:inline-block;padding:5px 0;color:#999}

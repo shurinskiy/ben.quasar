@@ -1,0 +1,1 @@
+import{_ as t,o as n,c as o,a as s,I as a}from"./index.fcade5f2.js";const r={name:"BContent",setup(){return{}}},_={class:"content"},c={class:"content__inner container"};function d(e,i,l,p,u,B){return n(),o("div",_,[s("div",c,[a(e.$slots,"default")])])}var v=t(r,[["render",d]]);export{v as B};
