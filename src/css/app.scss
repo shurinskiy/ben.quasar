@@ -2,7 +2,7 @@
 @include reset(); 
 
 // Include breakpoints badge
-body { @include screen-media(); }
+// body { @include screen-media(); }
 
 @include font-face("Roboto-Regular", "RR");
 @include font-face("Roboto-Light", "RL");
