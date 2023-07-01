@@ -1,0 +1,209 @@
+// app global css in SCSS form
+@include reset(); 
+
+// Include breakpoints badge
+body { @include screen-media(); }
+
+@include font-face("Roboto-Regular", "RR");
+@include font-face("Roboto-Light", "RL");
+@include font-face("Roboto-Thin", "RT");
+@include font-face("Roboto-Medium", "RM");
+@include font-face("Roboto-Bold", "RB");
+@include font-face("Roboto-Black", "RBL");
+// @import "../../node_modules/swiper/swiper";
+
+// Import BEM blocks scss
+// @import "../blocks/**/*.scss";
+
+body, html {
+	box-sizing: border-box;
+	font-size: #{$basesize}px;
+	line-height: 1.2;
+	font-family: "RR", sans-serif;
+	background-color: #fff;
+}
+
+#q-app {
+	min-height: 100vh;
+	display: flex;
+	flex-flow: column nowrap;
+}
+
+// .main { flex: 1 0 auto; }
+.footer { 
+	flex: 0 0 auto; 
+}
+
+
+p { margin-bottom: 10px; }
+strong { font-weight: bold; }
+em { font-style: italic; }
+
+.container {
+	$self: &;
+	box-sizing: border-box;
+	padding-right: 20px;
+	padding-left: 20px;
+	margin-right: auto;
+	margin-left: auto;
+	max-width: 1264px;
+	width: 100%;
+	
+	@include media('<=xs') {
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+}
+
+.catalog {
+	$self: &;
+	margin-bottom: 32px;
+	@keyframes show_fade { from { opacity: 0; } to { opacity: 1; }}
+
+	&_tabs {
+
+		.tab__buttons {
+			display: flex;
+			border: 1px solid #dedede;
+			border-radius: 4px;
+			padding: 1px;
+			margin-bottom: 24px;
+			width: 100%;
+			max-width: 400px;
+
+			@include media('<=xxs') {
+				max-width: none;
+			}
+		}
+
+		.tab__button {
+			@extend %reset-button;
+			width: 50%;
+			padding: 13px 10px;
+			color: #4d4d4d;
+			font-family: "RM", sans-serif;
+			
+			&.active {
+				color: #fff;
+				background-color: $accent;
+			}
+			
+			@include media('<=xxs') {
+				font-size: 14px;
+				padding: 10px;
+			}
+		}
+
+		.tab__blocks {
+
+		}
+
+		.tab__block {
+			animation: show_fade 0.4s;
+		}
+
+		#{$self}__items {
+			animation: show_fade 0.4s;
+		}
+	}
+
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 24px;
+		margin-bottom: 32px;
+		
+		@include media('<=lg') {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		
+		@include media('<=md') {
+			grid-template-columns: repeat(3, 1fr);
+		}
+		
+		@include media('<=sm') {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		
+		@include media('<=xxs') {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__feed {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-gap: 24px;
+		margin-bottom: 32px;
+
+	}
+
+	&__item {
+		grid-column: span 1;
+	}
+
+	&__navi {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+	}
+
+	&__navi-count {
+		margin-right: 10px;
+		color: #4d4d4d;
+
+		span {
+			font-family: "RB", sans-serif;
+		}
+	}
+}
+
+.q-dialog {
+	$self: &;
+
+	&__backdrop {
+		background-color: rgba(0, 0, 0, 0.75);
+		backdrop-filter: blur(3px);
+	}
+
+	&__inner {
+
+		&--minimized {
+			@include media('<=xxs') {
+				padding: 15px;
+			}
+		}
+	}
+}
+
+.q-field {
+	$self: &;
+	
+	&--outlined {
+
+		#{$self}__control {
+
+			&:before {
+				border-color: #dedede;
+			}
+			
+			&:hover:before {
+				border-color: #dedede;
+				// border-color: $primary;
+			}
+		}
+	}
+
+	&__marginal {
+		height: 48px;
+		color: rgba(0, 0, 0, 0.3);
+	}
+
+	&__control {
+		height: 48px;
+	}
+
+	&__label {
+		top: 14px;
+	}
+}

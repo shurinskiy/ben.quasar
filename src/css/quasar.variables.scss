@@ -1,0 +1,47 @@
+// Quasar SCSS (& Sass) Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass/SCSS variables found in Quasar's source Sass/SCSS files.
+
+// Check documentation for full list of Quasar variables
+
+// Your own variables (that are declared here) and Quasar's own
+// ones will be available out of the box in your .vue/.scss/.sass files
+
+// It's highly recommended to change the default colors
+// to match your app's branding.
+// Tip: Use the "Theme Builder" on Quasar's documentation website.
+
+// Import mixin library
+@import "additional.scss";
+
+// Import media-query helper
+@import "include-media/dist/_include-media.scss";
+
+$breakpoints: (
+	'xxxs': 360px,
+	'xxs': 480px,
+	'xs': 640px,
+	'sm': 780px,
+	'md': 960px,
+	'lg': 1100px,
+	'xlg': 1280px,
+	'xxlg': 1440px,
+	'xxxlg': 1680px,
+	'xxxxlg': 1920px
+);
+
+$primary   : #343C88;
+$secondary : #26A69A;
+$accent    : #F55D3E;
+
+$dark      : #1D1D1D;
+$dark-page : #121212;
+
+$positive  : #21BA45;
+$negative  : #C10015;
+$info      : #31CCEC;
+$warning   : #F2C037;
+
+$basesize: 16; 
+$images-path: "assets/images/";
